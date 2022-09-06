@@ -1,3 +1,4 @@
 #!/bin/bash
-python -c "import py_compile; py_compile.compile(\"$PYFILE\", \"$PYFILEc\"); echo "Compiling $PYFILE ...""
-exit 1
+echo "Compiling $PYFILE ..."
+python -c "import py_compile; py_compile.compile(\"$PYFILE\", \"$PYFILEc\");";
+exit 1;
