@@ -9,6 +9,6 @@ if __name__ == "__main__":
     elif av == 1:
         print("1 argument:")
     else:
-        print("{} arguments:".format(av))
+        print("{} arguments:".format(av-1))
     for j in range(1, av):
-        print("{}: {:s}".format(j, av))
+        print("{}: {:s}".format(j, av[j]))
