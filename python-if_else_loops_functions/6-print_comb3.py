@@ -5,3 +5,4 @@ for d in range(10):
         print("{}{}".format(d, u), end="")
         if ((d*10) + u) != 89:
             print(", ", end="")
+print("")
