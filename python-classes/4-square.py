@@ -10,6 +10,9 @@ class Square(object):
         """init size"""
         self.__size = size
 
+    def size(self):
+        return self.__size
+
     def __init__(self, value):
         """ check error"""
 
