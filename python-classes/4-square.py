@@ -6,14 +6,16 @@ class Square(object):
     """private instance
 """
 
-    def size(self, size=0):
+    def __init__(self, size=0):
         """init size"""
         self.__size = size
 
+    @property
     def size(self):
         return self.__size
 
-    def __init__(self, value):
+    @size.setter
+    def size(self, value):
         """ check error"""
 
         if (type(value) != int):
