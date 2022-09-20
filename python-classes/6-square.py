@@ -27,7 +27,7 @@ class Square(object):
 
     @property
     def position(self, value):
-        if value != 2 or type(value) != int:
+        if len(value) != 2 or type(value) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
