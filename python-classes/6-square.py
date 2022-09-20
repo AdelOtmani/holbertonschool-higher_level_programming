@@ -25,16 +25,14 @@ class Square(object):
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    @property
     def position(self, value):
         if len(self.__position) != 2 or type(value) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
 
-    @property
     def area(self):
         """return current area"""
 
-        return self.__size**2
+        return self.__size * self.__size
 
     def my_print(self):
         """print # """
@@ -50,5 +48,6 @@ class Square(object):
         else:
             print("")
 
+    @property
     def position(self):
         return self.__position
