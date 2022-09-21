@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
         for i in row:
             if type(i) != int and type(i) != float:
-                raise TypeError(("matrix must be a matrix"
+                raise TypeError(("matrix must be a matrix "
                                 "(list of lists) of integers/floats"))
     new_matix = []
     for array in matrix:
