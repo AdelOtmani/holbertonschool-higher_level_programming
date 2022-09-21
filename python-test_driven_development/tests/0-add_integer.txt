@@ -60,9 +60,4 @@ Non-Numbers
         ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
-::
 
-    >>> add_integer(None, None)
-    Traceback (most recent call last):
-        ...
-    TypeError: b must be an integer
