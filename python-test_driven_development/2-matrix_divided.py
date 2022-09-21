@@ -10,7 +10,6 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     for row in matrix:
-        print(row)
         if len(row) == len(matrix[0]):
             pass
         else:
@@ -29,11 +28,3 @@ def matrix_divided(matrix, div):
         new_matix.append(page)
 
     return new_matix
-
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
