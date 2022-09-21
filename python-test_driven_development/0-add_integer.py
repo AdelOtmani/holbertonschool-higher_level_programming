@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from re import T
-
-
 def add_integer(a, b=98):
     """Add integer (a+b)"""
 
