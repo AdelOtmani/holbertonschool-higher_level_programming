@@ -6,7 +6,7 @@ def matrix_divided(matrix, div):
     """ divided by div elemnt in matix
     """
     if type(div) != int and type(div) != float:
-        raise TypeError("div must be an integer")
+        raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
     for row in matrix:
