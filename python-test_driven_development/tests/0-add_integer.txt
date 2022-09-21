@@ -14,6 +14,7 @@ Numbers
 
 
     >>> add_integer = __import__('0-add_integer').add_integer
+
     >>> add_integer(1, 2)
     3
 
@@ -26,6 +27,11 @@ The second argument is optional and by default, it is 98.
 
     >>> add_integer(2)
     100
+
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
 
 
 
@@ -44,6 +50,7 @@ Non-Numbers
 
     >>> add_integer(4, "School")
     Traceback (most recent call last):
+        ...
     TypeError: b must be an integer
 
 ::
@@ -61,12 +68,14 @@ The function will fail if infinity is provided.
 
     >>> add_integer(float('inf'), float('inf'))
     Traceback (most recent call last):
+        ...
     OverflowError: cannot convert float infinity to integer
 
 And again with NaN numbers.
 
 ::
 
-    >>> add_integer(float(None), float(None))
+    >>> add_integer(float('nan'), float('nan'))
     Traceback (most recent call last):
+        ...
     ValueError: cannot convert float NaN to integer
