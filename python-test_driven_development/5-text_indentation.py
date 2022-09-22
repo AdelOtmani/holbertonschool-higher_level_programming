@@ -8,9 +8,15 @@ def text_indentation(text):
 
     if type(text) != str:
         raise TypeError("text must be a string")
-    for letter in text:
+    check = False
+    for i, letter in enumerate(text):
+        if check and letter == " ":
+            continue
+        elif check and letter != " ":
+            check = False
         if letter == "." or letter == "?" or letter == ":":
             print(letter)
-            print("")
+            check = True
+            print()
         else:
             print(letter, end="")
