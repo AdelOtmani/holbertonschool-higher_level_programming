@@ -27,7 +27,7 @@ Numbers
 
 The second argument must be int and != 0.
 
-    >>> matrix_divided(matrix, a)
+    >>> matrix_divided(matrix, "a")
     Traceback (most recent call last):
         ...
     TypeError: div must be a number
