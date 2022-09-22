@@ -18,7 +18,7 @@ def matrix_divided(matrix, div):
             if type(i) != int and type(i) != float:
                 raise TypeError(("matrix must be a matrix "
                                 "(list of lists) of integers/floats"))
-    new_matix = []
+    new_matrix = []
     for array in matrix:
         page = []
         for elmt in array:
@@ -28,5 +28,5 @@ def matrix_divided(matrix, div):
                 elmt /= div
                 elmt = round(elmt, 2)
                 page.append(elmt)
-        new_matix.append(page)
-    return new_matix
+        new_matrix.append(page)
+    return new_matrix
