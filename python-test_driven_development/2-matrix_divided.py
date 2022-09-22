@@ -2,9 +2,6 @@
 """divided matrice function"""
 
 
-from cmath import inf
-
-
 def matrix_divided(matrix, div):
     """ divided by div elemnt in matix
     """
