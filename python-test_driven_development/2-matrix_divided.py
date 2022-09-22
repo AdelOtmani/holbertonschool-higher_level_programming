@@ -2,6 +2,9 @@
 """divided matrice function"""
 
 
+from cmath import inf
+
+
 def matrix_divided(matrix, div):
     """ divided by div elemnt in matix
     """
@@ -22,9 +25,11 @@ def matrix_divided(matrix, div):
     for array in matrix:
         page = []
         for elmt in array:
-            elmt /= div
-            elmt = round(elmt, 2)
-            page.append(elmt)
+            if type(div) == float('inf'):
+                elmt = 0.0
+            else:
+                elmt /= div
+                elmt = round(elmt, 2)
+                page.append(elmt)
         new_matix.append(page)
-
     return new_matix
