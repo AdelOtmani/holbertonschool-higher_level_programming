@@ -35,7 +35,5 @@ Numbers
         ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-    >>> text_indentation("a\n\nb")
-    a
+    >>> text_indentation("\n")
     <BLANKLINE>
-    b
