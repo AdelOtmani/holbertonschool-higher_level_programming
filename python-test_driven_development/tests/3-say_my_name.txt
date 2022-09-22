@@ -8,7 +8,7 @@ This library is very simple, since it only has one function called
 Numbers
 =======
 
-``say_my_name()`` returns Returns a new matrix divided by div.
+``say_my_name()`` print first and last name (last name = "" by default).
 
 ::
 
