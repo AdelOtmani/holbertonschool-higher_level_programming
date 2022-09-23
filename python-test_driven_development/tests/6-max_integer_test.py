@@ -25,7 +25,3 @@ class TestMaxInteger(unittest.TestCase):
 
     def emptylist_test(self):
         self.assertEqual(max_integer([]), None)
-
-
-if __name__ == "__main__":
-    unittest.main()
