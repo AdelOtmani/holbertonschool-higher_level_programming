@@ -2,7 +2,6 @@
 """Define a class   """
 
 
-
 class Rectangle:
     """Empty class
 
