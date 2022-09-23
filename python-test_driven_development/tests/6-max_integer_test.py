@@ -8,7 +8,7 @@ max_integer = __import__('6-max_integer').max_integer
 class TestMaxInteger(unittest.TestCase):
     """unittest class for max_integer"""
 
-    def onlypos_valuetest(self):
+    def onlypos_value_test(self):
         self.assertEqual(max_integer([1, 12, 9]), 12)
 
     def onlyneg_value_test(self):
