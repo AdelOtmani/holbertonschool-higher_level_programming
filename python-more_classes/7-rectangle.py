@@ -7,12 +7,12 @@ class Rectangle:
 
 """
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-        Rectangle.print_symbol = '#'
 
     @property
     def width(self):
@@ -52,15 +52,15 @@ class Rectangle:
 
     def __str__(self):
         string = ""
-        rec = Rectangle.print_symbol
+        rec = self.print_symbol
 
         if self.__height == 0 or self.__width == 0:
             return ""
 
         for i in range(self.__height - 1):
-            string += (str(rec) * self.__width) + "\n"
-        string += (str(rec) * self.__width)
-        return str(string)
+            string += (rec * self.__width) + "\n"
+        string += (rec * self.__width)
+        return (string)
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
