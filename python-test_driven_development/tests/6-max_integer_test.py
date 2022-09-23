@@ -15,7 +15,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -12, -9]), -1)
 
     def oneneg_test(self):
-        self.assertEqual(max_integer([1, 6, 500, -1, 300]), 500)
+        self.assertEqual(max_integer([1, 6, 300, -1, 500]), 500)
 
     def single_test(self):
         self.assertEqual(max_integer([22]), 22)
