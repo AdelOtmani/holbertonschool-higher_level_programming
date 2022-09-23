@@ -2,9 +2,6 @@
 """Define a class   """
 
 
-import stat
-
-
 class Rectangle:
     """Empty class
 
