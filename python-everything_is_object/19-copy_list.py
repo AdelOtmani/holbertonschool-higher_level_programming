@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def copy_list(l):
-    return "{}".format(new_list=l.copy())
+    return "{}".format(new_list=l)
