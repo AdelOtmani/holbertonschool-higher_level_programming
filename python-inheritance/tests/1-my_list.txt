@@ -1,0 +1,34 @@
+===============================
+ How to Use 1-my_list.py
+===============================
+
+This library is very simple, since it only has one function called
+``MyList()``.
+
+Numbers
+=======
+
+``MyList()`` print first and last name (last name = "" by default).
+
+::
+
+
+    >>> MyList = __import__('1-my_list').MyList
+
+    >>> MyList.print_sorted([4])
+    [4]
+
+    >>> MyList.print_sorted([4,1])
+    [1, 4]
+
+
+    >>> MyList.print_sorted(['a', 'b', 0])
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'int' and 'str'
+
+    >>> MyList.print_sorted([])
+    []
+
+    >>> MyList()
+    []
