@@ -30,8 +30,10 @@ Numbers
     >>> MyList.print_sorted([])
     []
 
-    >>> MyList()
-    []
+    >>> MyList.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() missing 1 required positional argument: 'self'
 
     >>> my_list = MyList()
     >>> my_list.append(1)
