@@ -60,6 +60,6 @@ Numbers
     Traceback (most recent call last):
     TypeError: age must be an integer
 
-    >>> area()
+    >>> bg.area()
     Traceback (most recent call last):
-    NameError: name 'area' is not defined
+    Exception: area() is not implemented
