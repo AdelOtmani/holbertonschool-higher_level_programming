@@ -11,6 +11,6 @@ if not path.exists("add_item.json"):
     with open("add_item.json", 'w', encoding="utf-8") as Myfile:
         Myfile.write(json.dumps([]))
 
-myList = load_from_json_file("add_item.json")0
+myList = load_from_json_file("add_item.json")
 myList.extend(sys.argv[1:])
 save_to_json_file(myList, "add_item.json")
