@@ -2,8 +2,6 @@
 """Exercice 7 project holberton Adel Otmani
 """
 import sys
-import json
-from os import path
 if __name__ == "__main__":
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
     load_from_json_file = (
