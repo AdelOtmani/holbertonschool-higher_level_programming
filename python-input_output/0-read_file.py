@@ -11,4 +11,4 @@ def read_file(filename=""):
     """
 
     with open(filename, encoding="utf-8") as Myfile:
-        print(repr(Myfile))
+        repr(Myfile)
