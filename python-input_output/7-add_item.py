@@ -12,4 +12,4 @@ try:
 except ValueError:
     myList = []
 
-save_to_json_file(myList + sys.argv[1:], "add_item.json")
+save_to_json_file(sys.argv[1:], "add_item.json")
