@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Exercice 7 projet holberton Adel Otmani.
-
 """
 from os import path
 import sys
