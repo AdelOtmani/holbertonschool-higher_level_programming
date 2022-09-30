@@ -16,5 +16,5 @@ def write_file(filename="", text=""):
         Myfile.write(text)
     i = 0
     while i < len(text):
-        i+=1
+        i += 1
     return i
