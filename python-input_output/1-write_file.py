@@ -14,7 +14,7 @@ def write_file(filename="", text=""):
 
     with open(filename, 'w', encoding='utf-8') as Myfile:
         Myfile.write(text)
-        for i, c in enumerate.text:
-            pass
-        return c
-        print(Myfile.read(), end="")
+    i = 0
+    while i < len(text):
+        i+=1
+    return i
