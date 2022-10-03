@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Rectangle Class
     """
-Base = __import__('Base').Base
+from base import Base
 
 
 class Rectangle(Base):
