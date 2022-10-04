@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Rectangle Class
     """
+from turtle import heading, width
 from models.base import Base
 
 
@@ -18,17 +19,33 @@ class Rectangle(Base):
         super().__init__(id=None)
 
     @property
-    def __widht(self, value):
-        return self.__widht
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width_setter(self, value):
+        self.__width = value
 
     @property
-    def __height(self, value):
+    def height(self):
         return self.__height
 
-    @property
-    def __x(self, value):
-        return self.__x
+    @height.setter
+    def height_setter(self, value):
+        self.__height = value
 
     @property
-    def __y(self, value):
+    def x(self):
+        return self.__x
+
+    @x.setter
+    def x_setter(self, value):
+        self.__x = value
+
+    @property
+    def y(self):
         return self.__y
+
+    @y.setter
+    def y_setter(self, value):
+        self.__y = value
