@@ -78,7 +78,11 @@ class Rectangle(Base):
             that prints in stdout the Rectangle instance with the character #
         """
         c = "#"
+        for new_line in range(self.y):
+            print("")
         for i in range(self.height):
+            for space in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print(c, end="")
             print("")
