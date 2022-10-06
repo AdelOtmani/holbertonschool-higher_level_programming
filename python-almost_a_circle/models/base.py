@@ -2,7 +2,7 @@
 """Base class
     """
 import json
-import os.path
+from os.path import exists
 
 
 class Base:
@@ -58,9 +58,8 @@ class Base:
     def load_from_file(cls):
         """that returns a list of instances
         """
+        if not exists(cls.__name__):
+            return []
         with open(cls.__name__ + ".json", 'r') as my_file:
-            if (my_file) is FileExistsError:
-                return []
-
             return [cls.create(**d)
                     for d in cls.from_json_string(my_file.read())]
