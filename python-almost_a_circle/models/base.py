@@ -52,3 +52,13 @@ class Base:
             didi = cls(1, 1)
         didi.update(**dictionary)
         return didi
+
+    @classmethod
+    def load_from_file(cls):
+        """that returns a list of instances
+        """
+        with open(cls.__name__ + ".json", 'r') as my_file:
+            if not my_file:
+                return []
+            for d in cls.from_json_string(my_file.read()):
+                return [cls.create(**d)]
