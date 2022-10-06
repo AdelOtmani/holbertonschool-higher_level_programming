@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Base class
     """
-
-
 import json
 
 
@@ -22,6 +20,6 @@ class Base:
         """returns the JSON string representation of list_dictionaries
 
         """
-        if list_dictionaries:
-            return []
+        if not list_dictionaries:
+            return "[]"
         return json.dumps(list_dictionaries)
