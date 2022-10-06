@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """square Class
     """
+from tkinter import Y
 from models.rectangle import Rectangle
 
 
@@ -52,3 +53,6 @@ class Square(Rectangle):
         else:
             for arg in kwargs:
                 setattr(self, arg, kwargs.get(arg))
+
+    def to_dictionary(self):
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
