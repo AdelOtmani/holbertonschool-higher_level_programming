@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Base class
     """
-from genericpath import exists
 import json
 import os.path
+
 
 class Base:
     """class initialisation
@@ -59,8 +59,7 @@ class Base:
         """that returns a list of instances
         """
         with open(cls.__name__ + ".json", 'r') as my_file:
-            if my_file is not exists:
+            return [cls.create(**d)
+                    for d in cls.from_json_string(my_file.read())]
+            if (my_file) is FileExistsError:
                 return []
-            else:
-                for d in cls.from_json_string(my_file.read()):
-                    return cls.create(**d)
