@@ -27,10 +27,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         with open(cls.__name__ + ".json", 'w', encoding="utf8") as my_file:
-            if list_objs is None:
-                return "[]"
-            else:
-                list = []
+            list = []
+            if list_objs is not None:
                 for o in list_objs:
                     list.append(o.to_dictionary())
-                my_file.write(cls.to_json_string(list))
+            my_file.write(cls.to_json_string(list))
