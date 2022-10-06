@@ -43,12 +43,10 @@ class Square(Rectangle):
                 if a == 0:
                     self.id = arg
                 if a == 1:
-                    self.width = arg
+                    self.size = arg
                 if a == 2:
-                    self.height = arg
-                if a == 3:
                     self.x = arg
-                if a == 4:
+                if a == 3:
                     self.y = arg
                 a += 1
         else:
