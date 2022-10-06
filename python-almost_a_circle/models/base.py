@@ -48,7 +48,7 @@ class Base:
         """
         if cls.__name__ == 'Square':
             didi = cls(1)
-        if cls.__name__ == 'Retangle':
+        if cls.__name__ == 'Rectangle':
             didi = cls(1, 1)
         didi.update(**dictionary)
         return didi
