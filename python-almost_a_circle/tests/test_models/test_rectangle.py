@@ -28,6 +28,22 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(self.a.id, 1)
         self.assertEqual(self.b.id, 2)
 
+    def test_type(self):
+
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            c = Rectangle("1", 2)
+
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            c = Rectangle(1, "2")
+
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            c = Rectangle(1, 2, "1")
+
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            c = Rectangle(1, 2, 3, "1")
+
+
+
     def test_rect(self):
         """ test rectangle """
         r = Rectangle(10, 15)
