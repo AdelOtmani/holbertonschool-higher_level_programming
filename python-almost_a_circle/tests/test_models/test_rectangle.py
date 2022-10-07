@@ -110,6 +110,10 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(str(self.a), "[Rectangle] (1) 0/0 - 5/5")
         self.assertEqual(str(self.b), "[Rectangle] (2) 3/0 - 1/2")
 
+    def test_display(self):
+        with self.assertRaises(TypeError):
+            self.a.area(1)
+
     def test_update(self):
         """test for update no or one or all arg
         """
