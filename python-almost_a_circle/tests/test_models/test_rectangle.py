@@ -39,6 +39,30 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(1)
 
+    def test_width(self):
+        """test value widht
+        """
+        self.assertEqual(self.a.width, 5)
+        self.assertEqual(self.b.width, 1)
+
+    def test_height(self):
+        """test value height
+        """
+        self.assertEqual(self.a.height, 5)
+        self.assertEqual(self.b.height, 2)
+
+    def test_x(self):
+        """test value x
+        """
+        self.assertEqual(self.a.x, 0)
+        self.assertEqual(self.b.x, 3)
+
+    def test_y(self):
+        """test value y
+        """
+        self.assertEqual(self.a.y, 0)
+        self.assertEqual(self.b.y, 0)
+
     def test_rectangle_base(self):
         """ test rectangle base """
         self.assertIsInstance(Rectangle(10, 20), Base)
