@@ -7,6 +7,8 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+from contextlib import redirect_stdout
+import io
 
 
 class Test_Rectangle(unittest.TestCase):
@@ -18,6 +20,7 @@ class Test_Rectangle(unittest.TestCase):
         Base.__Base__nb_objects = 0
         cls.a = Rectangle(5, 5)
         cls.b = Rectangle(1, 2, 3)
+        cls.i = Rectangle(1, 1, 1, 1, 1)
 
     def test_no_arg(self):
         """ test with no arg """
@@ -114,6 +117,31 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.a.area(1)
 
+    def test_display_wh(self):
+        """Test display with width and height(size) without x and y"""
+        r = Rectangle(1, 2, 0, 0, 1)
+        with io.StringIO() as buf, redirect_stdout(buf):
+            self.a.display()
+            output = buf.getvalue()
+            self.assertEqual(output, ("#" * 5 + "\n") * 5)
+        with io.StringIO() as buf, redirect_stdout(buf):
+            r.display()
+            output = buf.getvalue()
+            self.assertEqual(output, ("#" * 1 + "\n") * 2)
+
+    def test_display_xy(self):
+        """Test display with x and y"""
+        with io.StringIO() as buf, redirect_stdout(buf):
+            self.b.display()
+            output = buf.getvalue()
+            self.assertEqual(output, (" " * 3 + "#" * 1 + "\n") * 2)
+
+        with io.StringIO() as buf, redirect_stdout(buf):
+            self.i.display()
+            output = buf.getvalue()
+            self.assertEqual(output, "\n" * 1 +
+                             (" " * 1 + "#" * 1 + "\n") * 1)
+
     def test_update(self):
         """test for update no or one or all arg
         """
@@ -137,3 +165,8 @@ class Test_Rectangle(unittest.TestCase):
     def test_arg(self):
         with self.assertRaises(TypeError):
             r = self.a.area(1)
+
+    def test_dict(self):
+        r = Rectangle(1, 1, 0, 1, 1)
+        res = {'x': 0, 'y': 1, 'id': 1, 'height': 1, 'width': 1}
+        self.assertDictEqual(res, r.to_dictionary())
