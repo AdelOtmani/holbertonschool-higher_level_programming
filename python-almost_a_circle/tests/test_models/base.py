@@ -88,7 +88,3 @@ class Test_instentiation(unittest.TestCase):
                          {"id": 5, "width": 5, "height": 6, "x": 8, "y": 9})
         self.assertEqual(json_file[1],
                          {"id": 6, "width": 7, "height": 7, "x": 9, "y": 8})
-
-
-if __name__ == '__main__':
-    unittest.main()
