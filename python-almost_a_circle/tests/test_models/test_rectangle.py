@@ -45,7 +45,6 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             c = Rectangle(1, 2, 3, "1")
 
-
     def test_error_value(self):
 
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
@@ -106,3 +105,31 @@ class Test_Rectangle(unittest.TestCase):
     def test_area(self):
         self.assertEqual(self.a.area(), 25)
         self.assertEqual(self.b.area(), 2)
+
+    def test_str_(self):
+        self.assertEqual(str(self.a), "[Rectangle] (1) 0/0 - 5/5")
+        self.assertEqual(str(self.b), "[Rectangle] (2) 3/0 - 1/2")
+
+    def test_update(self):
+        """test for update no or one or all arg
+        """
+        r = Rectangle(1, 2, 0, 0, 1)
+        self.assertEqual(str(r), "[Rectangle] (1) 0/0 - 1/2")
+        r.update(10)
+        self.assertEqual(str(r), "[Rectangle] (10) 0/0 - 1/2")
+        r.update(10, 2)
+        self.assertEqual(str(r), "[Rectangle] (10) 0/0 - 2/2")
+        r.update(10, 2, 3)
+        self.assertEqual(str(r), "[Rectangle] (10) 0/0 - 2/3")
+        r.update(10, 2, 3, 4)
+        self.assertEqual(str(r), "[Rectangle] (10) 4/0 - 2/3")
+        r.update(10, 2, 3, 4, 10)
+        self.assertEqual(str(r), "[Rectangle] (10) 4/10 - 2/3")
+        r.update(1, 1, 1, 1, 1)
+        self.assertEqual(str(r), "[Rectangle] (1) 1/1 - 1/1")
+        r.update()
+        self.assertEqual(str(r), "[Rectangle] (1) 1/1 - 1/1")
+
+    def test_arg(self):
+        with self.assertRaises(TypeError):
+            r = self.a.area(1)
