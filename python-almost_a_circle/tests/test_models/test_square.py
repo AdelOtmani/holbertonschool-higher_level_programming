@@ -2,10 +2,7 @@
 """
 Test for the Square class
 """
-
-from locale import dcgettext
 import unittest
-
 import inspect
 import io
 import json
@@ -312,15 +309,6 @@ class TestSquare(unittest.TestCase):
         except Exception:
             pass
         self.assertEqual(Square.load_from_file(), [])
-
-    #def test_load_from_empty_file(self):
-       # """test for load from file with empty file"""
-      #  try:
-      #      os.remove("Square.json")
-     #   except Exception:
-     #       pass
-      #  open("Square.json", 'a').close()
-      #  self.assertEqual(Square.load_from_file(), "[]")
 
     def test_load_from_file(self):
         """test for load from file"""
