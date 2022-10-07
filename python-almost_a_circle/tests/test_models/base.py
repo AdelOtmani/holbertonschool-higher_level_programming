@@ -8,7 +8,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 
 
-class Test_instentiation(unittest.TestCase):
+class Base(unittest.TestCase):
 
     def test_all_and_no_arg(self):
         """test when base have arg and
