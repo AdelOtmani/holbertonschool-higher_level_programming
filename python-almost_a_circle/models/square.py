@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """square Class
     """
-from tkinter import Y
 from models.rectangle import Rectangle
 
 
