@@ -4,7 +4,7 @@
 import unittest
 import json
 from os.path import exists
-from models.base import Base, __doc__
+from models.base import Base
 from models.rectangle import Rectangle
 
 
