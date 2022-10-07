@@ -25,8 +25,11 @@ class Test_Rectangle(unittest.TestCase):
             Rectangle()
 
     def test_id(self):
+        r = Rectangle(10, 15, 1, 2, None)
+
         self.assertEqual(self.a.id, 1)
         self.assertEqual(self.b.id, 2)
+        self.assertEqual(r.id, 3)
 
     def test_type(self):
 
