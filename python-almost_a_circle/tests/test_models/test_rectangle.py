@@ -99,3 +99,7 @@ class Test_Rectangle(unittest.TestCase):
     def test_none_id(self):
         """ test none id """
         self.assertEqual(Base(None).id, Base(None).id - 1)
+
+    def test_area(self):
+        self.assertEqual(self.a.area(), 25)
+        self.assertEqual(self.b.area(), 2)
