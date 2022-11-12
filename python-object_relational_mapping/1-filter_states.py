@@ -10,12 +10,12 @@ if __name__ == "__main__":
     mysql_passwd = sys.argv[2]
     mysql_db = sys.argv[3]
     con = MySQLdb.connect(host="localhost", port=3306, user=mysql_user,
-                         passwd=mysql_passwd, db=mysql_db)
+                          passwd=mysql_passwd, db=mysql_db)
     cur = con.cursor()
     cur.execute("SELECT * FROM states ORDER BY id")
     query_rows = cur.fetchall()
     for row in query_rows:
-        if row[1][0] is 'N':
+        if row[1][0] == 'N':
             print(row)
     cur.close()
     con.close()
