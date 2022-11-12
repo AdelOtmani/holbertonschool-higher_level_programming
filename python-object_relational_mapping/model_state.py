@@ -16,7 +16,6 @@ class State(Base):
     inherits from Base
     """
 
-
-    __table_name__ = "states"
+    __tablename__ = "states"
     id = Column(Integer, nullable=False, autoincrement=True, primary_key=True)
     name = Column(String(128), nullable=False)
