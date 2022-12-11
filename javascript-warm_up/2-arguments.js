@@ -5,6 +5,6 @@ if (process.argv.length< 3) {
 } else if (process.argv.length === 3) {
   str = 'Argument found';
 } else {
-  str = 'Argu found';
+  str = 'Arguments found';
 }
 console.log(str);
