@@ -1,2 +1,2 @@
 #!/usr/bin/node
-const Rectangle = class {};
+const Rectangle = class {}
