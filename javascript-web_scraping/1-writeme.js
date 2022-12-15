@@ -1,8 +1,5 @@
 #!/usr/bin/node
 const fs = require('fs');
-fs.appendFile(process.argv[2], process.argv[3], function (error, content) {
-  if (error) {
-    console.log(error);
-  }
+fs.appendFile(process.argv[2], process.argv[3], function (content) {
   console.log(content);
 });
